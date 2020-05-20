@@ -17,7 +17,7 @@ date: May-18-2020
 1. To find a value in array: 
 ```python
 def binary_search(arr, t):
-    l, h = 0, len(arr) - 1
+    l, h = 0, len(arr)-1
     while l <= h:
         m = (h + l) // 2  # use l + (h - l) // 2 for non python
         if arr[m] == t: return m
@@ -31,7 +31,7 @@ In case the target value occurrs more than once, this binary search code will fi
 2. To find the left most occurrence of the value:
 ```python
 def binary_search_left(arr, t):
-    l, h = 0, len(arr) - 1
+    l, h = 0, len(arr)
     while l < h:
         m = (h + l) // 2
         if arr[m] < t: l = m + 1
@@ -46,7 +46,7 @@ That is to say, if `binary_search_left(arr, t)` returns `i`, then `arr[:i] < t` 
 3. To find the right most occurrence of the value:
 ```python
 def binary_search_right(arr, t):
-    l, h = 0, len(arr) - 1
+    l, h = 0, len(arr)
     while l < h:
         m = (h + l) // 2
         if arr[m] <= t: l = m + 1

@@ -118,3 +118,4 @@
 "451 Sort Characters By Frequency","Medium","Hash Table|Sorting","https://youtu.be/JTdpTHaGQoA","https://leetcode.com/problems/sort-characters-by-frequency/","https://github.com/ryancheunggit/leetcode/code/451_solution.cpp"
 "74 Search a 2D Matrix","Medium","Binary Search","https://youtu.be/xbAelmKYCk8","https://leetcode.com/problems/search-a-2d-matrix/","https://github.com/ryancheunggit/leetcode/code/74_solution.cpp"
 "658 Find K Closest Elements","Medium","Binary Search","https://youtu.be/ZZmIVlgDIlQ","https://leetcode.com/problems/find-k-closest-elements/","https://github.com/ryancheunggit/leetcode/code/658_solution.cpp"
+"410 Split Array Largest Sum","Hard","Dynamic Programming|Binary Search","https://youtu.be/FrZ_yV2TfLE","https://leetcode.com/problems/split-array-largest-sum/","https://github.com/ryancheunggit/leetcode/code/410_solution_dp.cpp|https://github.com/ryancheunggit/leetcode/code/410_solution_binary_search.cpp"

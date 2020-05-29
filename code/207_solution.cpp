@@ -1,43 +1,49 @@
-//       5         ----->4
-//       ^        /
-//       |       /
-//       V      /
-// 0---->1---->2---->3
+//      6
+//      ^      ----->5
+//      |     /
+//      V    /
+// 0--->1--->2--->3--->4
+//           ^
+//          / 
+// 7--->8---    
 
-          
-// taken = {3, 4, 2}
-// path = [0, 1, 5, 1]
-          
+// 
+
+// taken = {5,4,3,2}       
+// path = [0,1,6,1]
+
 // dfs search
-// when we want to push a course onto stack and found out its already on stack -> cycle 
-// mark course as taken during backtrack.
+// mark course as taken during backtracking(postorder)
+// when we want to push a course on stack and it is already on stack -> cycle
+
 class Solution {
 public:
-    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
-        // graph processing
-        vector<vector<int>> next_courses(numCourses);  // O(E) space
-        for (auto t:prerequisites) next_courses[t[1]].push_back(t[0]); 
+    bool canFinish(int N, vector<vector<int>>& prerequisites) {
+        bool taken[100000]={false}, path[100000]={false};  // O(N)
+
+        // graph processing  edge list -> adj list
+        vector<vector<int>> next_courses(N);
+        for (auto t:prerequisites) next_courses[t[1]].push_back(t[0]); // O(E), O(E)
         
-        bool taken[100000]={false}, path[100000]={false}; // O(V) space
-        
-        // return true if there is a cycle
-        function<bool(int)> dfs = [&](int course) { 
-            if (path[course]) return true;
-            path[course] = true;
+        // dfs function return cycle or not
+        function<bool(int)> dfs = [&](int c) {
+            if (taken[c]) return false;
+            if (path[c]) return true;
+            path[c] = true;
             
-            for (int next:next_courses[course]) {
+            for (int next:next_courses[c]) {
                 bool has_cycle = dfs(next);
                 if (has_cycle) return true;
             }
-            path[course] = false;
-            taken[course] = true;
+            taken[c] = true;
+            path[c] = false;
             return false;
         };
         
-        // dfs search for cycle detection
-        for (int course=0;course<numCourses;course++) {
-            if (taken[course]) continue;
-            if (dfs(course)) return false;
+        // try dfs search to detect cycle
+        for (int c=0;c<N;c++) {  // O(N) time
+            if (taken[c]) continue;
+            if (dfs(c)) return false;  // O(E) time
         }
         return true;
     }

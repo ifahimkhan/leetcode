@@ -128,3 +128,4 @@
 "82 Remove Duplicates from Sorted List II","Medium","Linked List","https://youtu.be/ODwu-L7nH9A","https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/","https://github.com/ryancheunggit/leetcode/code/82_solution.cpp"
 "141/142 Linked List Cycle I/II","Easy|Medium","Linked List","https://youtu.be/--7pLKyaZ1U","https://leetcode.com/problems/linked-list-cycle/|https://leetcode.com/problems/linked-list-cycle-ii/","https://github.com/ryancheunggit/leetcode/code/141_solution.cpp|https://github.com/ryancheunggit/leetcode/code/142_solution.cpp"
 "207 Course Schedule","Medium","Graph|Depth First Search","https://youtu.be/ZSDYVmb91uw","https://leetcode.com/problems/course-schedule/","https://github.com/ryancheunggit/leetcode/code/207_solution.cpp"
+"138 Copy List with Random Pointer","Medium","Linked List","","https://leetcode.com/problems/copy-list-with-random-pointer/","https://github.com/ryancheunggit/leetcode/code/138_solution.cpp"

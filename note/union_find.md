@@ -24,8 +24,9 @@ class UnionFind(object):
     def find(self, i):
         # while i != self.parents[i]:
         #     # path compression, have i points to the cluster centroid
-        #     self.parents[i] = self.find(parents[i])  
-        # return self.parents[i]
+        #     self.parents[i] = self.find(self.parents[i])  
+        #     i = self.parents[i]
+        # return i
         root = i
         while self.parents[root] != root:
             root = self.parents[root]

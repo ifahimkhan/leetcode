@@ -5,10 +5,10 @@ class UnionFind(object):
         if nums: list(map(self.insert, nums))
         
     def insert(self, i):
-        self.parents[i], self.sizes[i] = i, 1
+        self.parents[i] = i
+        self.sizes[i] = 1
 
     def find(self, i):
-        if i not in self.parents: self.insert(i)
         while i != self.parents[i]:
             self.parents[i] = self.find(self.parents[i])  
             i = self.parents[i]

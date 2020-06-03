@@ -54,8 +54,10 @@ class UnionFind(object):
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         uf = UnionFind()  
+        max_len = 0
         for num in nums: # O(N)
             if num not in uf.parents: uf.insert(num)
             if num + 1 in uf.parents: uf.union(num, num + 1)
             if num - 1 in uf.parents: uf.union(num, num - 1)
-        return max(uf.sizes.values()) if uf.sizes else 0
+            max_len = max(max_len, uf.sizes[uf.find(num)])
+        return max_len

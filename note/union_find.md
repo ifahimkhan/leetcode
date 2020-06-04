@@ -62,3 +62,35 @@ print(num_components)
     1. Sort edges by edge weights ascendingly.
     2. Iteratve over the edges unify nodes when two nodes don't belong to same subset.
     3. Repeat 2 until no nodes or no edges.
+
+### An Implementation without pre-allocation
+```python
+class UnionFind(object):
+    def __init__(self):
+        self.parents = dict()
+        self.sizes = dict()
+        self.n_sets = 0
+
+    def __contains__(self, i):
+        return i in self.parents
+
+    def insert(self, i):
+        if self.__contains__(i): return
+        self.parents[i] = i
+        self.sizes = 1
+        self.n_sets += 1
+
+    def find(self, i):
+        while i != self.parents[i]:
+            self.parents[i] = self.find(self.parents[i])  
+            i = self.parents[i]
+        return i
+
+    def union(self, p, q):
+        root_p, root_q = map(self.find, (p, q))
+        if root_p == root_q: return
+        small, big = sorted([root_p, root_q], key=lambda x: self.sizes[x])
+        self.parents[small] = big
+        self.sizes[big] += self.sizes[small]    
+        self.n_sets += 1
+```  

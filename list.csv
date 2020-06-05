@@ -139,3 +139,5 @@
 "305 Number of Islands II","Hard","Union Find","https://youtu.be/u0JggMnEanA","https://leetcode.com/problems/number-of-islands-ii/","https://github.com/ryancheunggit/leetcode/code/305_solution.py"
 "344 Reverse String","Easy","Two Pointers","https://youtu.be/XUVY8-SP-oU","https://leetcode.com/problems/reverse-string/","https://github.com/ryancheunggit/leetcode/code/344_solution.py"
 "778 Swim in Rising Water","Hard","Union Find","https://youtu.be/EkqE8v8rg3s","https://leetcode.com/problems/swim-in-rising-water/","https://github.com/ryancheunggit/leetcode/code/778_solution.py"
+"1013 Partition Array Into Three Parts With Equal Sum","Easy","Array","https://youtu.be/cGAeK6axGBg","https://leetcode.com/problems/partition-array-into-three-parts-with-equal-sum/","https://github.com/ryancheunggit/leetcode/code/1013_solution.py"
+"548 Split Array with Equal Sum","Medium","Array|Hash Set","https://youtu.be/GeT_IfUbC0s","https://leetcode.com/problems/split-array-with-equal-sum/","https://github.com/ryancheunggit/leetcode/code/548_solution.py"

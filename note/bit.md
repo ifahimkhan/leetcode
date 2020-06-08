@@ -76,10 +76,10 @@ def check_even(x):
     return (x & 1) == 0
 ```
 
-8. Check number is power of 2
+8. Check number(integer) is power of 2
 ```python
 def check_pow_2(x):
-    return x & (x - 1) == 0
+    return x > 0 and (x & x - 1) == 0
 ```
 
 9. Check two numbers are of opposite sign

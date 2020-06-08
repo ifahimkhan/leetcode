@@ -144,3 +144,4 @@
 "924 Minimize Malware Spread","Hard","Union Find","https://youtu.be/p5tFzm-j9eM","https://leetcode.com/problems/minimize-malware-spread/","https://github.com/ryancheunggit/leetcode/code/924_solution.py"
 "406 Queue Reconstruction by Height","Medium","Array","https://youtu.be/6plztg2nnjY","https://leetcode.com/problems/queue-reconstruction-by-height/","https://github.com/ryancheunggit/leetcode/code/406_solution.py"
 "684/685 Redundant Connection I/II","Medium|Hard","Union Find","https://youtu.be/5dFtLkqHrHw","https://leetcode.com/problems/redundant-connection/|https://leetcode.com/problems/redundant-connection-ii/","https://github.com/ryancheunggit/leetcode/code/684_solution.py|https://github.com/ryancheunggit/leetcode/code/685_solution.py"
+"518 Coin Change 2","Medium","Dynamic Programming","https://youtu.be/rkWBTDX5fm0","https://leetcode.com/problems/coin-change-2/","https://github.com/ryancheunggit/leetcode/code/518_solution.py"

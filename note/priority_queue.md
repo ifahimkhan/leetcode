@@ -28,7 +28,7 @@ date: June-8-2020
 
 ## Implementation  
 ```python
-class Heapq(object):
+class HeapQueue(object):
     from operator import lt, gt
     comparators = {'min': lt, 'max': gt}
 

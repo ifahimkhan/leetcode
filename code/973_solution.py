@@ -26,8 +26,7 @@ class Solution:
             while i < j:
                 while i < r and dist(*points[i]) <= pivot: i += 1
                 while j > l and dist(*points[j]) >= pivot: j -= 1
-                if i < j and dist(*points[i]) > dist(*points[j]):
-                    swap(i, j)
+                if i < j and dist(*points[i]) > dist(*points[j]): swap(i, j)
             swap(j, l)
             return j
     
@@ -36,7 +35,7 @@ class Solution:
             d = m - l + 1
             if d == k: return
             elif d < k: sort(m + 1, r, k - d)
-            else: sort(l, m - 1, k)
+            else: sort(l, m - 1, k) 
         
         sort(0, len(points) - 1, K)
         return points[:K]

@@ -153,3 +153,4 @@
 "75 Sort Colors","Medium","Two Pointers|Sorting","https://youtu.be/ywicUkwMVEw","https://leetcode.com/problems/sort-colors/","https://github.com/ryancheunggit/leetcode/code/75_solution.cpp"
 "313 Super Ugly Number","Medium","Priority Queue","https://youtu.be/pXKB2OovUi4","https://leetcode.com/problems/super-ugly-number/","https://github.com/ryancheunggit/leetcode/code/313_solution.py"
 "380 Insert Delete GetRandom O(1)","Medium","Array|Hash Table|Design","https://youtu.be/AWC0suagMMo","https://leetcode.com/problems/insert-delete-getrandom-o1/","https://github.com/ryancheunggit/leetcode/code/380_solution.py"
+"502 IPO","Hard","Priority Queue","https://youtu.be/VFXfhB8vS94","https://leetcode.com/problems/ipo/","https://github.com/ryancheunggit/leetcode/code/502_solution.cpp"

@@ -158,3 +158,4 @@
 "1439 Find the Kth Smallest Sum of a Matrix With Sorted Rows","Hard","Priority Queue","https://youtu.be/uCdTOV9IEm4","https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/","https://github.com/ryancheunggit/leetcode/code/1439_solution.py"
 "787 Cheapest Flights Within K Stops","Medium","Breadth First Search|Dynamic Programming","https://youtu.be/e3nnAZm4Kg4","https://leetcode.com/problems/cheapest-flights-within-k-stops/","https://github.com/ryancheunggit/leetcode/code/787_solution.py"
 "700 Search in a Binary Search Tree","Easy","Tree","https://youtu.be/yogDVzdYNJ0","https://leetcode.com/problems/search-in-a-binary-search-tree/","https://github.com/ryancheunggit/leetcode/code/700_solution.cpp"
+"468 Validate IP Address","Medium","String","https://youtu.be/Vdz6JaEtE3g","https://leetcode.com/problems/validate-ip-address/","https://github.com/ryancheunggit/leetcode/code/468_solution.py"

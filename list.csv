@@ -162,3 +162,5 @@
 "1065 Index Pairs of a String","Easy","Trie","https://youtu.be/dFp1hdN2owg","https://leetcode.com/problems/index-pairs-of-a-string/","https://github.com/ryancheunggit/leetcode/code/1065_solution.py"
 "130 Surrounded Regions","Medium","Depth First Search|Breadth First Search","https://youtu.be/2TloOdiuGM0","https://leetcode.com/problems/surrounded-regions/","https://github.com/ryancheunggit/leetcode/code/130_solution.py"
 "720 Longest Word in Dictionary","Easy","Trie|Depth First Search","https://youtu.be/t2jdltmqnlY","https://leetcode.com/problems/longest-word-in-dictionary/","https://github.com/ryancheunggit/leetcode/code/720_solution.py"
+"648 Replace Words","Medium","Trie","https://youtu.be/5liJnc8iNeY","https://leetcode.com/problems/replace-words/","https://github.com/ryancheunggit/leetcode/code/648_solution.py"
+"275 H-Index II","Medium","Binary Search","https://youtu.be/l58nSAsqN-k","https://leetcode.com/problems/h-index-ii/","https://github.com/ryancheunggit/leetcode/code/275_solution.py"

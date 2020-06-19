@@ -164,3 +164,4 @@
 "720 Longest Word in Dictionary","Easy","Trie|Depth First Search","https://youtu.be/t2jdltmqnlY","https://leetcode.com/problems/longest-word-in-dictionary/","https://github.com/ryancheunggit/leetcode/code/720_solution.py"
 "648 Replace Words","Medium","Trie","https://youtu.be/5liJnc8iNeY","https://leetcode.com/problems/replace-words/","https://github.com/ryancheunggit/leetcode/code/648_solution.py"
 "275 H-Index II","Medium","Binary Search","https://youtu.be/l58nSAsqN-k","https://leetcode.com/problems/h-index-ii/","https://github.com/ryancheunggit/leetcode/code/275_solution.py"
+"1044 Longest Duplicate Substring","Hard","Binary Search|Hash","https://youtu.be/pCVCoCn-8fw","https://leetcode.com/problems/longest-duplicate-substring/","https://github.com/ryancheunggit/leetcode/code/1044_solution.py"

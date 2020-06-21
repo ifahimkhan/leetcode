@@ -167,3 +167,4 @@
 "1044 Longest Duplicate Substring","Hard","Binary Search|Hash","https://youtu.be/pCVCoCn-8fw","https://leetcode.com/problems/longest-duplicate-substring/","https://github.com/ryancheunggit/leetcode/code/1044_solution.py"
 "677 Map Sum Pairs","Medium","Hash|Trie","https://youtu.be/GwiKly7UJbQ","https://leetcode.com/problems/map-sum-pairs/","https://github.com/ryancheunggit/leetcode/code/677_solution.py"
 "60 Permutation Sequence","Medium","Decrease and Conquer","https://youtu.be/Yg6ZCno2wuY","https://leetcode.com/problems/permutation-sequence/","https://github.com/ryancheunggit/leetcode/code/60_solution.py"
+"336 Palindrome Pairs","Hard","Trie","https://youtu.be/D5PMCyPcw-o","https://leetcode.com/problems/palindrome-pairs/","https://github.com/ryancheunggit/leetcode/code/336_solution.py"

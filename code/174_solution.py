@@ -24,8 +24,9 @@ class Solution:
         for r in range(nrow-1,-1,-1):
             for c in range(ncol-1,-1,-1):
                 # basecase
-                if r == nrow - 1 and c == ncol - 1: hp[r][c] = max(1, 1 - dungeon[-1][-1])
-                else:
+                if r == nrow - 1 and c == ncol - 1: 
+                    hp[r][c] = max(1, 1 - dungeon[-1][-1])
+                else: 
                     hp[r][c] = max(1, min(hp[r][c+1], hp[r+1][c]) - dungeon[r][c])
         return hp[0][0]
         

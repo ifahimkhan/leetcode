@@ -21,13 +21,11 @@ class Solution:
     def calculateMinimumHP(self, dungeon: List[List[int]]) -> int:
         nrow, ncol = len(dungeon), len(dungeon[0])
         hp = [[INT_MAX] * (ncol + 1) for _ in range(nrow + 1)]
+        hp[~1][~1] = max(1, 1 - dungeon[-1][-1]) # basecase
         for r in range(nrow-1,-1,-1):
             for c in range(ncol-1,-1,-1):
-                # basecase
-                if r == nrow - 1 and c == ncol - 1: 
-                    hp[r][c] = max(1, 1 - dungeon[-1][-1])
-                else: 
-                    hp[r][c] = max(1, min(hp[r][c+1], hp[r+1][c]) - dungeon[r][c])
+                if r == nrow - 1 and c == ncol - 1: continue
+                hp[r][c] = max(1, min(hp[r][c+1], hp[r+1][c]) - dungeon[r][c])
         return hp[0][0]
         
         

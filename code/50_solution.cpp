@@ -8,11 +8,9 @@ public:
         }
         double accum = 1;
         while (N) {
-            if (N & 1) {
-                accum *= x;
-            }
+            if (N & 1) accum *= x;
             x *= x;
-            N /= 2;
+            N >>= 1;
         }
         return accum;
     }

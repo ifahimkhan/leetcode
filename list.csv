@@ -171,5 +171,5 @@
 "212 Word Search II","Hard","Trie|Backtracking","https://youtu.be/vuzMYqf9CNE","https://leetcode.com/problems/word-search-ii/","https://github.com/ryancheunggit/leetcode/code/212_solution.py"
 "174 Dungeon Game","Hard","Dynamic Programming","https://youtu.be/2hfeSCSiETs","https://leetcode.com/problems/dungeon-game/","https://github.com/ryancheunggit/leetcode/code/174_solution.py"
 "1288 Remove Covered Intervals","Medium","Sweep Line|Sorting","https://youtu.be/7y9q1YgZ27E","https://leetcode.com/problems/remove-covered-intervals/","https://github.com/ryancheunggit/leetcode/code/1288_solution.py"
-"1272 Remove Interval","Medium","Sweep Line","https://youtu.be/tLrPA4C3-is","https://leetcode.com/problems/remove-interval/","https://github.com/ryancheunggit/leetcode/code/1272_solution.py"
-"222 Count Complete Tree Nodes","Medium","Tree|Binary Search|Bit Manipulation|Decrease and Conquer","https://youtu.be/Bm9gkcn1Qbo","https://leetcode.com/problems/count-complete-tree-nodes/",""
+"1272 Remove Interval","Medium","Sweep Line","https://youtu.be/UJ0jNXPA-sw","https://leetcode.com/problems/remove-interval/","https://github.com/ryancheunggit/leetcode/code/1272_solution.py"
+"222 Count Complete Tree Nodes","Medium","Tree|Binary Search|Bit Manipulation|Decrease and Conquer","https://youtu.be/Bm9gkcn1Qbo","https://leetcode.com/problems/count-complete-tree-nodes/","https://github.com/ryancheunggit/leetcode/code/222_solution.py"

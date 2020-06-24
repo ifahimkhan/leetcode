@@ -173,3 +173,4 @@
 "1288 Remove Covered Intervals","Medium","Sweep Line|Sorting","https://youtu.be/7y9q1YgZ27E","https://leetcode.com/problems/remove-covered-intervals/","https://github.com/ryancheunggit/leetcode/code/1288_solution.py"
 "1272 Remove Interval","Medium","Sweep Line","https://youtu.be/UJ0jNXPA-sw","https://leetcode.com/problems/remove-interval/","https://github.com/ryancheunggit/leetcode/code/1272_solution.py"
 "222 Count Complete Tree Nodes","Medium","Tree|Binary Search|Bit Manipulation|Decrease and Conquer","https://youtu.be/Bm9gkcn1Qbo","https://leetcode.com/problems/count-complete-tree-nodes/","https://github.com/ryancheunggit/leetcode/code/222_solution.py"
+"96 Unique Binary Search Trees","Medium","Tree|Dynamic Programming|Recursion","https://youtu.be/ZHwmWSbg63E","https://leetcode.com/problems/unique-binary-search-trees/","https://github.com/ryancheunggit/leetcode/code/96_solution.py"

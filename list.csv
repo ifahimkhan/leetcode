@@ -175,3 +175,4 @@
 "222 Count Complete Tree Nodes","Medium","Tree|Binary Search|Bit Manipulation|Decrease and Conquer","https://youtu.be/Bm9gkcn1Qbo","https://leetcode.com/problems/count-complete-tree-nodes/","https://github.com/ryancheunggit/leetcode/code/222_solution.py"
 "96 Unique Binary Search Trees","Medium","Tree|Dynamic Programming|Recursion","https://youtu.be/ZHwmWSbg63E","https://leetcode.com/problems/unique-binary-search-trees/","https://github.com/ryancheunggit/leetcode/code/96_solution.py"
 "1229 Meeting Scheduler","Medium","Sweep Line|Priority Queue","https://youtu.be/kF-zi_FCwUA","https://leetcode.com/problems/meeting-scheduler/","https://github.com/ryancheunggit/leetcode/code/1229_solution.py"
+"287 Find the Duplicate Number","Medium","Binary Search|Linked List","https://youtu.be/zQ6eAdtDeqg","https://leetcode.com/problems/find-the-duplicate-number/","https://github.com/ryancheunggit/leetcode/code/287_solution.py"

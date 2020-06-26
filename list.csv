@@ -178,3 +178,4 @@
 "287 Find the Duplicate Number","Medium","Binary Search|Linked List","https://youtu.be/zQ6eAdtDeqg","https://leetcode.com/problems/find-the-duplicate-number/","https://github.com/ryancheunggit/leetcode/code/287_solution.py"
 "850 Rectangle Area II","Hard","Sweep Line","https://youtu.be/xm5-u_l8tTY","https://leetcode.com/problems/rectangle-area-ii/","https://github.com/ryancheunggit/leetcode/code/850_solution.py"
 "129 Sum Root to Leaf Numbers","Medium","Tree|Depth First Search","https://youtu.be/48z2d8yCZQg","https://leetcode.com/problems/sum-root-to-leaf-numbers/","https://github.com/ryancheunggit/leetcode/code/129_solution.py"
+"218 The Skyline Problem","Hard","Sweep Line|Priority Queue","https://youtu.be/zzArofV2qpU","https://leetcode.com/problems/the-skyline-problem/","https://github.com/ryancheunggit/leetcode/code/218_solution_1.py|https://github.com/ryancheunggit/leetcode/code/218_solution_2.py"

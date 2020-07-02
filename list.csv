@@ -184,3 +184,5 @@
 "62 Unique Paths","Medium","Math|Dynamic Programming","https://youtu.be/FqrPyRd4VNk","https://leetcode.com/problems/unique-paths/","https://github.com/ryancheunggit/leetcode/code/62_solution.py"
 "210 Course Schedule II","Medium","Topological Sort","https://youtu.be/CCZTUDZdnvk","https://leetcode.com/problems/course-schedule-ii/","https://github.com/ryancheunggit/leetcode/code/210_solution.py|https://github.com/ryancheunggit/leetcode/code/210_solution.cpp"
 "444 Sequence Reconstruction","Medium","Topological Sort","https://youtu.be/Bqhf7zPMdaU","https://leetcode.com/problems/sequence-reconstruction/","https://github.com/ryancheunggit/leetcode/code/444_solution.py"
+"441 Arranging Coins","Easy","Math","https://youtu.be/UhoFoKVpt0Q","https://leetcode.com/problems/arranging-coins/","https://github.com/ryancheunggit/leetcode/code/441_solution.py"
+"329 Longest Increasing Path in a Matrix","Hard","Topological Sort","https://youtu.be/xLrWemVlKiY","https://leetcode.com/problems/longest-increasing-path-in-a-matrix/","https://github.com/ryancheunggit/leetcode/code/329_solution.py"

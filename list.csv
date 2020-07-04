@@ -188,3 +188,4 @@
 "329 Longest Increasing Path in a Matrix","Hard","Topological Sort","https://youtu.be/xLrWemVlKiY","https://leetcode.com/problems/longest-increasing-path-in-a-matrix/","https://github.com/ryancheunggit/leetcode/code/329_solution.py"
 "107 Binary Tree Level Order Traversal II","Easy","Tree|Breadth First Search","https://youtu.be/GNXNW0UyHqY","https://leetcode.com/problems/binary-tree-level-order-traversal-ii/","https://github.com/ryancheunggit/leetcode/code/107_solution.py"
 "957 Prison Cells After N Days","Medium","Hash Table|Bit Manipulation","https://youtu.be/A0Tke1UbhkQ","https://leetcode.com/problems/prison-cells-after-n-days/","https://github.com/ryancheunggit/leetcode/code/957_solution.py"
+"264 Ugly Number II","Medium","Priority Queue|Hash Table","https://youtu.be/f3VpFuNd7YU","https://leetcode.com/problems/ugly-number-ii/","https://github.com/ryancheunggit/leetcode/code/264_solution.py"

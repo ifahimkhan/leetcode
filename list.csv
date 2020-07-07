@@ -191,3 +191,4 @@
 "264 Ugly Number II","Medium","Priority Queue","https://youtu.be/f3VpFuNd7YU","https://leetcode.com/problems/ugly-number-ii/","https://github.com/ryancheunggit/leetcode/code/264_solution.py"
 "1203 Sort Items by Groups Respecting Dependencies","Hard","Topological Sort","https://youtu.be/I4Vwkq7e2xE","https://leetcode.com/problems/sort-items-by-groups-respecting-dependencies/","https://github.com/ryancheunggit/leetcode/code/1203_solution.py"
 "66 Plus One","Easy","Array","https://youtu.be/99NnUtCm8GQ","https://leetcode.com/problems/plus-one/","https://github.com/ryancheunggit/leetcode/code/66_solution.py"
+"1026 Maximum Difference Between Node and Ancestor","Medium","Tree|Depth First Search","https://youtu.be/f37BCBHGFGA","https://leetcode.com/problems/maximum-difference-between-node-and-ancestor/","https://github.com/ryancheunggit/leetcode/code/1026_solution.py"

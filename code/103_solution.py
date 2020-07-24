@@ -28,7 +28,7 @@ class Solution:
             results.append(level_nodes)
         return results
     
-    
+
     def dfs(self, root: TreeNode) -> List[List[int]]:
         if not root: return []
         
@@ -49,4 +49,4 @@ class Solution:
         return results
             
     
-    zigzagLevelOrder = dfs # dfs
+    zigzagLevelOrder = dfs # bfs

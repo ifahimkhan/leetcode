@@ -5,21 +5,20 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
+    def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
         root, stack, i = None, [], 0
-        for val in reversed(postorder):
-            new_node = TreeNode(val)
-            if not root:
-                node = root = new_node
+        for val in preorder:
+            new = TreeNode(val)
+            if not root: 
+                last = root = new
             else:
-                if node.val == inorder[~i]:
-                    while stack and stack[-1].val == inorder[~i]:
+                if last.val == inorder[i]:
+                    while stack and stack[-1].val == inorder[i]:
+                        last = stack.pop()
                         i += 1
-                        node = stack.pop()
-                    node.left = new_node
-                    node = new_node
+                    last.right = new
                 else:
-                    node.right = new_node
-                    node = new_node
-            stack.append(new_node)
+                    last.left = new
+                last = new
+            stack.append(new)
         return root

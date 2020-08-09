@@ -12,9 +12,9 @@
 # Search with . O(#total nodes in DS)~T O(#total nodes in DS)~S
 
 class WordDictionary:
-    class TrieNode:
+    class TrieNode(defaultdict):
         def __init__(self):
-            self.childrens = collections.defaultdict(WordDictionary.TrieNode)
+            super().__init__(WordDictionary.TrieNode)
             self.terminal = False
     
     def __init__(self):
@@ -24,8 +24,7 @@ class WordDictionary:
     def addWord(self, word: str) -> None:
         """ Adds a word into the data structure. """
         node = self.root
-        for char in word:
-            node = node.childrens[char]
+        for char in word: node = node[char]
         node.terminal = True
 
     def search(self, word: str) -> bool:
@@ -35,20 +34,17 @@ class WordDictionary:
         """
         n = len(word)
         
-        def find(node, i):
+        def dfs(node, i):
             if i == n: return node.terminal
             char = word[i]
             if char == '.':
-                for key in node.childrens:
-                    if find(node.childrens[key], i+1): 
-                        return True
+                for key in node:
+                    if dfs(node[key], i+1): return True
                 return False
-            elif char not in node.childrens:
-                return False
-            else:
-                return find(node.childrens[char], i+1)
+            elif char not in node: return False
+            else: return dfs(node[char], i+1)
             
-        return find(self.root, 0)
+        return dfs(self.root, 0)
         
         
 

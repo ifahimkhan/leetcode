@@ -19,7 +19,9 @@ class MyHashSet:
 
     def remove(self, val):
         bucket, idx = self._find(val)
-        if idx != -1: bucket.pop(idx)
+        if idx != -1: # bucket.pop(idx) # bucket.remove(idx)
+            bucket[idx] = bucket[-1]
+            bucket.pop()
 
     def contains(self, val):
         return self._find(val)[1] != -1

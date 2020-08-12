@@ -7,18 +7,19 @@
 
 
 class Solution:
-    def preorder_iterative(self, root):
+    def inorder_iterative(self, root):
         results = []
-        stack = [root] if root else []
-        while stack:
+        stack, node = [], root
+        while stack or node:
+            while node:
+                stack.append(node)
+                node = node.left
             node = stack.pop()
             results.append(node.val)
-            for child in [node.right, node.left]:
-                if not child: continue
-                stack.append(child)
+            node = node.right
         return results
 
-    def preorder_iterative_with_set(self, root):
+    def inorder_iterative_with_set(self, root):
         results = []
         stack, visited = [root], set()
         while stack:
@@ -27,20 +28,21 @@ class Solution:
             if node in visited: results.append(node.val)
             else:
                 visited.add(node)
-                # stack.extend([node.right, node, node.left])  # inorder
+                stack.extend([node.right, node, node.left])  # inorder
                 # stack.extend([node, node.right, node.left])  # postorder
-                stack.extend([node.right, node.left, node])  # preorder
-
-    def preorder_recursive(self, root):
+                # stack.extend([node.right, node.left, node])  # preorder    
+        return results
+        
+    def inorder_recursive(self, root):
         results = []
 
         def dfs(node):
-            if not node: return 
-            results.append(node.val)
+            if not node: return
             if node.left: dfs(node.left)
+            results.append(node.val)
             if node.right: dfs(node.right)
-
+        
         dfs(root)
         return results
-
-    preorderTraversal = preorder_recursive # preorder_iterative # preorder_iterative_with_set
+    
+    inorderTraversal = inorder_recursive # inorder_iterative # inorder_iterative_with_set

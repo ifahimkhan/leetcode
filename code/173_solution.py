@@ -28,8 +28,7 @@ class BSTIterator:
         self.node = self.node.right
         return ret_val
     
-    def next(self):
-        return self.__next__()        
+    next = __next__
 
     def hasNext(self) -> bool:
         """ Return whether we have a next smallest number """

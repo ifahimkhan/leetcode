@@ -21,20 +21,26 @@ class UnionFind(object):
         self.parents = list(range(n))
         self.sizes = [1] * n
 
-    def find(self, i):
-        # while i != self.parents[i]:
-        #     # path compression, have i points to the cluster centroid
-        #     self.parents[i] = self.find(self.parents[i])  
-        #     i = self.parents[i]
-        # return i
+    def _find_recursive(self, i):
+        while i != self.parents[i]:
+            # path compression, have i points to the cluster centroid
+            self.parents[i] = self.find_recursive(self.parents[i])  
+            i = self.parents[i]
+        return i
+
+    def _find_iterative(self, i):
+        # 1 path to find the root
         root = i
         while self.parents[root] != root:
             root = self.parents[root]
+        # 2 path to assign every node in the path to points at root
         while self.parents[i] != root:
             parent = self.parents[i]
             self.parents[i] = root
             i = parent
         return root
+
+    find = _find_recursive
 
     def union(self, p, q):
         root_p, root_q = map(self.find, (p, q))
@@ -77,7 +83,7 @@ class UnionFind(object):
     def insert(self, i):
         if self.__contains__(i): return
         self.parents[i] = i
-        self.sizes = 1
+        self.sizes[i] = 1
         self.n_sets += 1
 
     def find(self, i):
@@ -92,5 +98,5 @@ class UnionFind(object):
         small, big = sorted([root_p, root_q], key=lambda x: self.sizes[x])
         self.parents[small] = big
         self.sizes[big] += self.sizes[small]    
-        self.n_sets += 1
+        self.n_sets -= 1
 ```  

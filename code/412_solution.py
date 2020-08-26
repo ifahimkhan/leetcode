@@ -4,7 +4,7 @@ class Solution:
             results = []
             if i % 3 == 0: results.append("Fizz")
             if i % 5 == 0: results.append("Buzz")
-            if (i % 3 != 0) and (i % 5 != 0): results.append(str(i))
+            if i % 3 and i % 5: results.append(str(i))
             return ''.join(results)
         return list(map(parse_number, range(1, n + 1)))
 

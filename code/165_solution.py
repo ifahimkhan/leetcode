@@ -19,9 +19,6 @@ class Solution:
             if v1 > v2: return 1
             if v1 < v2: return -1
         
-        # both exhausted tire
-        if i == n1 + 1 and j == n2 + 1: return 0
-        
         # version 1 exhausted, check if remainder of version 2 are all 0
         if i == n1 + 1:
             for k in range(j, n2): 
@@ -31,4 +28,5 @@ class Solution:
         if j == n2 + 1:
             for k in range(i, n1):
                 if version1[k] not in ['.', '0']: return 1        
+        
         return 0

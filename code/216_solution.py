@@ -1,6 +1,5 @@
 class Solution:
     def combinationSum3(self, k: int, n: int) -> List[List[int]]:
-        numbers = set(range(1, 10))
         solutions = []
         
         def backtrack(candidate, last, total):

@@ -14,18 +14,22 @@ class Solution:
             return l <= r
 
         output, l, r = [], None, None
-        for i, (il, ir) in enumerate(intervals):
+        for i, itv in enumerate(intervals):
+            il, ir = itv
+            
             if intersect(il, ir, nl, nr):
                 if l is None: l = min(il, nl)
                 if r is None: r = max(ir, nr)
-                l = min(l, il)
-                r = max(r, ir)
+                l, r = min(l, il), max(r, ir)
             else:
-                if r:
+                if r is not None:
                     output.append([l, r])
                     l, r = None, None
                 if i and intervals[i - 1][1] < nl and nr < il:
                     output.append(newInterval)
-                output.append([il, ir])
-        if r: output.append([l, r])
+                output.append(itv)
+                
+        if r is not None: 
+            output.append([l, r])
+            
         return output

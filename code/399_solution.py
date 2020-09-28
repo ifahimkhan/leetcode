@@ -15,7 +15,9 @@ class Solution:
             used.add(current)
             for next_ in filter(lambda x: x not in used, edges[current]):
                 result = dfs(next_, target, used)
-                if result != -1: return edges[current][next_] * result
+                if result != -1: 
+                    edges[current][target] = edges[current][next_] * result
+                    return edges[current][target]
             return -1
         
         return [dfs(*query, set()) for query in queries]

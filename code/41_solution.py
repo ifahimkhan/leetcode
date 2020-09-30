@@ -15,11 +15,10 @@ class Solution:
         # make sure r points to last postive number. 
         if nums[r] <= 0: r -= 1 
         
-        # if there is no missing positive number nums[0:r) should be 1 to r + 1 (shuffled)
+        # if there is no missing positive number nums[0, ... , r] should be 1 to r + 1 (shuffled)
         
         # 2nd pass: mark existing postive numbers that are <= num_max
         num_max = r + 1
-        print(nums, r)        
         for i in range(r + 1):
             num = abs(nums[i])
             if num > num_max: continue

@@ -1,32 +1,21 @@
 class Solution:
     def ladderLength(self, beginWord: str, endWord: str, wordList: List[str]) -> int:
         wordList = set(wordList)
+        if endWord not in wordList: return 0
         word_used = {beginWord}
-        queue = deque([(beginWord, 1)])
         
         def get_next_word(word):
-            candidates = []
             for i in range(len(word)):
                 for letter in string.ascii_lowercase:
-                    candidate = word[:i] + letter + word[i + 1:]
-                    if candidate in wordList:
-                        candidates.append(candidate)
-            return candidates
-        
-        
-        candidates = {beginWord: get_next_word(beginWord)}
-        
-        for word in wordList:
-            candidates[word] = get_next_word(word)
-            
+                    next_word = word[:i] + letter + word[i + 1:]
+                    if next_word in wordList and next_word not in word_used:
+                        yield next_word
+
+        queue = deque([(beginWord, 1)])
         while queue:
             word, step = queue.popleft()
-            for candidate in candidates[word]:
-                if candidate == endWord: return step + 1
-                if candidate in word_used: continue
-                word_used.add(candidate)
-                queue.append((candidate, step + 1))
-            candidates[word] = []
+            for next_word in get_next_word(word):
+                if next_word == endWord: return step + 1
+                word_used.add(next_word)
+                queue.append((next_word, step + 1))
         return 0
-
-

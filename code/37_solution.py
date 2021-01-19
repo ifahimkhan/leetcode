@@ -16,13 +16,12 @@ class Solution:
 
         def backtrack(board, not_visited):
             if not not_visited: return True
-            while not_visited:
-                (r, c) = not_visited.pop()
-                for digit in valid_choices(r, c):
-                    board[r][c] = digit
-                    if backtrack(board, not_visited): return True
-                    board[r][c] = '.'
-                not_visited.append((r, c))
-                return False
+            (r, c) = not_visited.pop()
+            for digit in valid_choices(r, c):
+                board[r][c] = digit
+                if backtrack(board, not_visited): return True
+                board[r][c] = '.'
+            not_visited.append((r, c))
+            return False
 
         backtrack(board, not_visited)

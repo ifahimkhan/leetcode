@@ -18,6 +18,7 @@ class Solution:
         for i in range(max_i, -1, -1):
             if dp[i] == l and nums[max_i] % nums[i] == 0:
                 subset.append(nums[i])
+                max_i = i
                 l -= 1
         return subset
         

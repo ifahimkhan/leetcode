@@ -11,7 +11,8 @@ class Solution:
             for (u0, u1), v in dp.items(): 
                 # try to add string to all the existing subsets
                 if u0 + n0 > m or u1 + n1 > n: continue
-                update[(u0 + n0, u1 + n1)] = max(1 + v, dp.get((u0 + n0, u1 + n1), 0))
+                if dp.get((u0 + n0, u1 + n1), 0) < v + 1:
+                    update[(u0 + n0, u1 + n1)] = v + 1
             dp.update(update)
             
         return max(dp.values())                    

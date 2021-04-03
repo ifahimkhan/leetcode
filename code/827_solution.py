@@ -38,12 +38,12 @@ class Solution:
         
         for r in range(nrows):
             for c in range(ncols):
-                if grid[r][c]: 
-                    uf.insert((r, c)) 
-                    for nr, nc in get_neighbors(r, c):
-                        if grid[nr][nc]:
-                            uf.insert((nr, nc))       
-                            uf.union((r,c), (nr, nc))
+                if not grid[r][c]: continue
+                uf.insert((r, c)) 
+                for nr, nc in get_neighbors(r, c):
+                    if not grid[nr][nc]: continue
+                    uf.insert((nr, nc))       
+                    uf.union((r,c), (nr, nc))
                         
         
         max_size = 0 if not uf.sizes else max(uf.sizes.values())
@@ -53,11 +53,9 @@ class Solution:
                 
                 neighbor_info = dict()
                 for loc in get_neighbors(r, c):
-                    if loc not in uf:
-                        neighbor_info[loc] = 0
-                    else:
-                        island_id = uf.find(loc)                        
-                        neighbor_info[island_id] = uf.sizes[island_id]
+                    if loc not in uf: continue
+                    island_id = uf.find(loc)                        
+                    neighbor_info[island_id] = uf.sizes[island_id]
                 max_size = max(max_size, 1 + sum(neighbor_info.values(), 0))
 
         return max_size

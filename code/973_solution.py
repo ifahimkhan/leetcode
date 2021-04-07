@@ -21,7 +21,7 @@ class Solution:
     
         def partition(l, r):
             m = (l + r) // 2
-            pivot = dist(*points[m])
+            pivot = dist(points[m])
             swap(l, m)
             i, j = l, r
             while i < j:

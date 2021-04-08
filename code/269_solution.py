@@ -74,20 +74,43 @@ class Solution:
         #         if not in_degrees[nxt_node]: queue.append(nxt_node)
         # return ''.join(ordering) if len(ordering) == len(nodes) else ""
         
-        visited = dict()  # visited node -> cause cycle or not
-        def dfs(node):
-            if node not in visited:
-                visited[node] = True
-                for nxt_node in out_edges[node]:
-                    if dfs(nxt_node): return True
-                ordering.append(node)
-                visited[node] = False
-            return visited[node]
+#         visited = dict()  # visited node -> cause cycle or not
+#         def dfs(node):
+#             if node not in visited:
+#                 visited[node] = True
+#                 for nxt_node in out_edges[node]:
+#                     if dfs(nxt_node): return True
+#                 ordering.append(node)
+#                 visited[node] = False  # confusing hre
+#             return visited[node]
+            
+#         while nodes:
+#             node = nodes.pop()
+#             has_cycle = dfs(node)
+#             if has_cycle: return ""
+#             else: nodes = nodes.difference(visited.keys())
+#         return ''.join(ordering[::-1])
+      
+        # alternative dfs code, seperate out the tracking on visted node and nodes on component/path currently visiting      
+        visited = set()  
+        path = set() 
+        
+        def dfs(node): # return True if has cycle
+            if node in visited: return False
+            if node in path: return True
+            path.add(node)
+            for nxt_node in out_edges[node]:
+                if dfs(nxt_node): return True
+            visited.add(node)
+            path.discard(node)
+            ordering.append(node)
+            return False
             
         while nodes:
             node = nodes.pop()
             has_cycle = dfs(node)
             if has_cycle: return ""
-            else: nodes = nodes.difference(visited.keys())
+            else: nodes = nodes.difference(visited)
         return ''.join(ordering[::-1])
+    
     

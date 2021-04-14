@@ -30,9 +30,8 @@ public:
         Node *prev=head, *trav=head->next;
         while (trav != head) {
             if (prev->val <= insertVal and insertVal <= trav->val) break;
-            if (prev->val > trav->val) {
-                if (insertVal >= prev->val or insertVal <= trav->val) break;
-            }
+            if (prev->val > trav->val and insertVal >= prev->val) break;
+            if (prev->val > trav->val and insertVal <= trav->val) break;
             prev = trav;
             trav = trav->next;
         }

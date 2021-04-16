@@ -33,32 +33,28 @@ class Solution:
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
         if not head: return head
         
-        def has_k_nodes(trav, k):
-            while trav and k:
-                trav = trav.next
+        def has_k_nodes(curr, k):
+            while curr and k:
+                curr = curr.next
                 k -= 1
             return k == 0
         
-        def reverse_k_nodes(trav, k):
-            newtail = trav
+        def reverse_k_nodes(curr, k):
+            tail = curr
             prev = None
-            for i in range(k):
-                next_ = trav.next
-                trav.next = prev
-                prev = trav
-                trav = next_
-            return trav, prev, newtail
+            for i in range(k): curr.next, prev, curr = prev, curr, curr.next
+            return curr, prev, tail
         
-        dummy = prev = ListNode(None)
-        trav = dummy.next = head
-        while has_k_nodes(trav, k):
-            beyound, newhead, newtail = reverse_k_nodes(trav, k)
+        sentinel = prev = ListNode(None)
+        sentinel.next = curr = head
+        while has_k_nodes(curr, k):
+            next_curr, new_head, new_tail = reverse_k_nodes(curr, k)
             
-            prev.next = newhead
-            newtail.next = beyound
+            prev.next = new_head
+            new_tail.next = next_curr
             
-            prev = trav
-            trav = beyound
+            prev = curr
+            curr = next_curr
         
-        prev.next = trav
-        return dummy.next
+        prev.next = curr
+        return sentinel.next

@@ -9,9 +9,6 @@ class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         def dfs(node):
             if node in (None, p, q): return node
-            l = dfs(node.left)
-            r = dfs(node.right)
-            if l and r: return node
-            if l: return l
-            if r: return r
+            l, r = dfs(node.left), dfs(node.right)
+            return node if l and r else l or r
         return dfs(root)

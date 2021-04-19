@@ -20,19 +20,19 @@ class Solution:
 
     def solution_iterative(self, root: TreeNode) -> int:
         max_path_sum = root.val
-        path_sum = dict()
-        visited = set()
+        path_sum = defaultdict(int)
         stack = [root]
         while stack:
-            node = stack.pop()
-            if not node: continue
-            if node in visited:
-                l, r = path_sum.get(node.left, 0), path_sum.get(node.right, 0)
+            node = stack[-1]
+            if node.left and node.left not in path_sum: 
+                stack.append(node.left)
+            elif node.right and node.right not in path_sum: 
+                stack.append(node.right)
+            else:  
+                stack.pop()
+                l, r = path_sum[node.left], path_sum[node.right]
                 path_sum[node] = max(node.val, l + node.val, r + node.val, 0)
                 max_path_sum = max(max_path_sum, l + r + node.val)
-            else:
-                visited.add(node)
-                stack.extend([node, node.right, node.left])  # postorder
         return max_path_sum
         
     maxPathSum = solution_recurrsive #  solution_iterative

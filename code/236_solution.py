@@ -13,16 +13,20 @@ class Solution:
             return node if l and r else l or r
         return dfs(root)
 
-    def solution_iterative(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':    
-        stack = [[root, [root]]]
-        while stack:
-            node, path = stack.pop()
-            if node == p: p_path = path.copy()
-            if node == q: q_path = path.copy()
-            for child in [node.left, node.right]:
-                if not child: continue
-                stack.append([child, path + [child]])
-        
+    def solution_iterative(root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':    
+        def find_path(node, target):
+            path, stack = [], [node]
+            while stack:
+                node = stack.pop()
+                if not path or path[~0] is not node:
+                    path.append(node)
+                    if node is target: return path
+                    stack.extend([nd for nd in [node, node.left, node.right] if nd])
+                else:
+                    path.pop()
+
+        p_path = find_path(root, p)
+        q_path = find_path(root, q)
         lca = root
         for i in range(min(len(p_path), len(q_path))):
             if p_path[i] != q_path[i]: break

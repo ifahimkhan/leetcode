@@ -19,8 +19,8 @@
 # '000' -> null
 # '001' -> node with no childrens
 # '101' -> node with only right child
-# '011' -> node with only left child
-# '111' -> node with two childrens
+# '010' -> node with only left child
+# '110' -> node with two childrens
 
 
 class Codec:

@@ -17,8 +17,8 @@ class Solution:
     def iterative(self, root, p, q):
         node = root
         while node:
-            if p.val > node.val and q.val > node.val: node = node.right
-            elif p.val < node.val and q.val < node.val: node = node.left
+            if p.val > node.val < q.val: node = node.right
+            elif p.val < node.val > q.val: node = node.left
             else: return node
 
     lowestCommonAncestor = iterative # recursive

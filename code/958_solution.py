@@ -20,6 +20,6 @@ class Solution:
             if l & (l + 1) == 0 and l / 2 <= r <= l: return l + r + 1
             if r & (r + 1) == 0 and r <= l <= r * 2 + 1: return l + r + 1
             return -1
-        return dfs(root) != 0
+        return dfs(root) != -1
     
     isCompleteTree = solution_dfs # solution_bfs

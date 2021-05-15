@@ -27,7 +27,7 @@ class Solution:
             if c in '+-': return 1
             if c in '0123456789': return 2
             if c == '.': return 3
-            if c == 'e': return 4
+            if c in 'eE': return 4
             return 5
         
         state = 0
